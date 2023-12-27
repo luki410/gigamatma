@@ -1,25 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./Header.js";
+import Benefits from "./Benefits";
+import CourseSteps from "./CourseSteps";
+import Faq from "./Faq";
+import Footer from "./Footer";
+import Opinions from "./Opinions";
+import Bestsellers from "./Bestsellers";
+import Formulas from "./Formulas";
+import Comparison from "./Comparison";
+import Hero from "./Hero.js"
 
-function App() {
+export default function App() {
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    /*
+    <>
+      <Header />
+      <Hero />
+      <Bestsellers />
+      <Benefits />
+      <Comparison />
+      <Opinions />
+      <Formulas />
+      <CourseSteps />
+      <Faq />
+      <Footer />
+    </>
+*/
+
+    <>
+      <Header />
+      <Hero />
+      <Bestsellers />
+      <Benefits />
+      <Comparison />
+      <Opinions />
+      <Formulas />
+      <CourseSteps />
+      <Faq />
+      <Footer />
+    </>
+
   );
 }
 
-export default App;
+

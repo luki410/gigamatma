@@ -1,13 +1,1838 @@
-body {
+/*:root {
+  --color-primary: #6741d9;
+  --color-primary-light: #7950f2;
+  --color-text: #dee2e6;
+  --color-text-dark: #adb5bd;
+  --color-background-100: #343a40;
+  --color-background-500: #2b3035;
+  --color-background-900: #212529;
+  --color-red: #fa5252;
+  --color-red-dark: #e03131;
+}*/
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body
+{
+  font-family: 'Inter', sans-serif;
+}
+
+/*----------------     Navbar      ---------------------*/
+
+.HeaderMobile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.25);
+}
+
+.NavbarToggle {
+  background-color: transparent;
+  border: none;
+}
+
+.NavbarMobile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.NavbarMobileRedirect {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  letter-spacing: 0.6px;
+  text-align: center;
+  padding-left: 12px;
+}
+
+.NavbarMobileContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.NavbarMobileLine {
+  width: 90%;
+  margin-left: 5%;
+  border: solid 1px #3FA9F5;
+}
+
+.HeaderDesktop {
+  display: none;
+}
+
+
+
+/*----------------     Hero      ---------------------*/
+
+.HeroImgDesktop {
+  display: none;
+}
+
+.HeroImgMobile {
+  width: 100%;
+  max-height: 600px;
+  padding-top: 16px;
+  
+}
+
+.Hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 16px 16px 32px 16px;
+}
+
+.HeroIntroduction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.HeroIntroduction>h1 {
+  font-size: 32px;
+  text-align: center;
+}
+
+.HeroIntroduction>p {
+  padding-top: 16px;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.HeroLinks {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  padding-top: 16px;
+}
+
+.HeroLinks>a {
+  font-size: 20px;
+}
+
+.HeroBuy {
+  display: flex;
+  padding: 8px 12px;
+  align-items: center;
+  border-radius: 6px;
+  background: #2E3192;
+  box-shadow: 0px -2px 0px 0px rgba(36, 36, 36, 0.25) inset;
+  text-decoration: none;
+  color: white;
+}
+
+.HeroBuy>img {
+  margin-right: 12px;
+}
+
+.HeroCreateAcc {
+  display: flex;
+  padding: 8px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 6px;
+  border: 1px solid #3FA9F5;
+  background: #FFF;
+  box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  color: black;
+}
+
+
+/*----------------     Benefits      ---------------------*/
+
+.Benefits {
+  background: #2E3192;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  gap: 16px;
+}
+
+.BenefitsContainerAll {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.BenefitsIntro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.BenefitsIntro>h1 {
+  font-size: 32px;
+}
+
+.BenefitsIntro>p {
+  padding-top: 16px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.BenefitContainer>img {
+  max-height: 180px;
+  aspect-ratio: 1;
+}
+
+.BenefitContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 8px;
+  gap: 16px;
+  text-align: center;
+}
+
+.BenefitContainer > h2
+{
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.BenefitContainer > p{
+  font-weight: 200;
+}
+
+/*---------------------     CourseSteps      ------------------*/
+
+.CourseSteps {
+  display: flex;
+  flex-direction: column;
+  margin-top: 48px;
+}
+
+.StepsImgBoy,
+.StepsImgTools {
+  display: none;
+}
+
+.StepsIntroContainer>h1 {
+  font-size: 28px;
+  text-align: center;
+}
+
+
+.StepsIntroContainer>p {
+  font-size: 18px;
+  text-align: center;
+  text-wrap: balance;
+  padding-top: 16px;
+}
+
+.StepTitle {
+  font-size: 24px;
+  margin-left: 8px;
+  margin-top: 8px;
+}
+
+.StepsDescription {
+  margin-top: 16px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.NumberContainer {
+  font-size: 140px;
+  text-align: right;
+}
+
+.Number1 {
+  color: #8CC63F;
+  text-shadow: rgb(255, 255, 255) 10px 0px 0px, rgb(255, 255, 255) 9.95004px 0.998334px 0px, rgb(255, 255, 255) 9.80067px 1.98669px 0px, rgb(255, 255, 255) 9.55336px 2.9552px 0px, rgb(255, 255, 255) 9.21061px 3.89418px 0px, rgb(255, 255, 255) 8.77583px 4.79426px 0px, rgb(255, 255, 255) 8.25336px 5.64642px 0px, rgb(255, 255, 255) 7.64842px 6.44218px 0px, rgb(255, 255, 255) 6.96707px 7.17356px 0px, rgb(255, 255, 255) 6.2161px 7.83327px 0px, rgb(255, 255, 255) 5.40302px 8.41471px 0px, rgb(255, 255, 255) 4.53596px 8.91207px 0px, rgb(255, 255, 255) 3.62358px 9.32039px 0px, rgb(255, 255, 255) 2.67499px 9.63558px 0px, rgb(255, 255, 255) 1.69967px 9.8545px 0px, rgb(255, 255, 255) 0.707372px 9.97495px 0px, rgb(255, 255, 255) -0.291995px 9.99574px 0px, rgb(255, 255, 255) -1.28844px 9.91665px 0px, rgb(255, 255, 255) -2.27202px 9.73848px 0px, rgb(255, 255, 255) -3.2329px 9.463px 0px, rgb(255, 255, 255) -4.16147px 9.09297px 0px, rgb(255, 255, 255) -5.04846px 8.63209px 0px, rgb(255, 255, 255) -5.88501px 8.08496px 0px, rgb(255, 255, 255) -6.66276px 7.45705px 0px, rgb(255, 255, 255) -7.37394px 6.75463px 0px, rgb(255, 255, 255) -8.01144px 5.98472px 0px, rgb(255, 255, 255) -8.56889px 5.15501px 0px, rgb(255, 255, 255) -9.04072px 4.2738px 0px, rgb(255, 255, 255) -9.42222px 3.34988px 0px, rgb(255, 255, 255) -9.70958px 2.39249px 0px, rgb(255, 255, 255) -9.89993px 1.4112px 0px, rgb(255, 255, 255) -9.99135px 0.415807px 0px, rgb(255, 255, 255) -9.98295px -0.583741px 0px, rgb(255, 255, 255) -9.8748px -1.57746px 0px, rgb(255, 255, 255) -9.66798px -2.55541px 0px, rgb(255, 255, 255) -9.36457px -3.50783px 0px, rgb(255, 255, 255) -8.96758px -4.4252px 0px, rgb(255, 255, 255) -8.481px -5.29836px 0px, rgb(255, 255, 255) -7.90968px -6.11858px 0px, rgb(255, 255, 255) -7.25932px -6.87766px 0px, rgb(255, 255, 255) -6.53644px -7.56803px 0px, rgb(255, 255, 255) -5.74824px -8.18277px 0px, rgb(255, 255, 255) -4.90261px -8.71576px 0px, rgb(255, 255, 255) -4.00799px -9.16166px 0px, rgb(255, 255, 255) -3.07333px -9.51602px 0px, rgb(255, 255, 255) -2.10796px -9.7753px 0px, rgb(255, 255, 255) -1.12153px -9.93691px 0px, rgb(255, 255, 255) -0.123887px -9.99923px 0px, rgb(255, 255, 255) 0.87499px -9.96165px 0px, rgb(255, 255, 255) 1.86512px -9.82453px 0px, rgb(255, 255, 255) 2.83662px -9.58924px 0px, rgb(255, 255, 255) 3.77978px -9.25815px 0px, rgb(255, 255, 255) 4.68517px -8.83455px 0px, rgb(255, 255, 255) 5.54374px -8.32267px 0px, rgb(255, 255, 255) 6.34693px -7.72764px 0px, rgb(255, 255, 255) 7.0867px -7.0554px 0px, rgb(255, 255, 255) 7.75566px -6.31267px 0px, rgb(255, 255, 255) 8.34713px -5.50686px 0px, rgb(255, 255, 255) 8.8552px -4.64602px 0px, rgb(255, 255, 255) 9.27478px -3.73877px 0px, rgb(255, 255, 255) 9.6017px -2.79415px 0px, rgb(255, 255, 255) 9.83268px -1.82163px 0px, rgb(255, 255, 255) 9.96542px -0.830894px 0px;
+  margin-right: -26px;
+  margin-top: -30px;
+}
+
+.Number2 {
+  color: #3FA9F5;
+  text-shadow: rgb(255, 255, 255) 10px 0px 0px, rgb(255, 255, 255) 9.95004px 0.998334px 0px, rgb(255, 255, 255) 9.80067px 1.98669px 0px, rgb(255, 255, 255) 9.55336px 2.9552px 0px, rgb(255, 255, 255) 9.21061px 3.89418px 0px, rgb(255, 255, 255) 8.77583px 4.79426px 0px, rgb(255, 255, 255) 8.25336px 5.64642px 0px, rgb(255, 255, 255) 7.64842px 6.44218px 0px, rgb(255, 255, 255) 6.96707px 7.17356px 0px, rgb(255, 255, 255) 6.2161px 7.83327px 0px, rgb(255, 255, 255) 5.40302px 8.41471px 0px, rgb(255, 255, 255) 4.53596px 8.91207px 0px, rgb(255, 255, 255) 3.62358px 9.32039px 0px, rgb(255, 255, 255) 2.67499px 9.63558px 0px, rgb(255, 255, 255) 1.69967px 9.8545px 0px, rgb(255, 255, 255) 0.707372px 9.97495px 0px, rgb(255, 255, 255) -0.291995px 9.99574px 0px, rgb(255, 255, 255) -1.28844px 9.91665px 0px, rgb(255, 255, 255) -2.27202px 9.73848px 0px, rgb(255, 255, 255) -3.2329px 9.463px 0px, rgb(255, 255, 255) -4.16147px 9.09297px 0px, rgb(255, 255, 255) -5.04846px 8.63209px 0px, rgb(255, 255, 255) -5.88501px 8.08496px 0px, rgb(255, 255, 255) -6.66276px 7.45705px 0px, rgb(255, 255, 255) -7.37394px 6.75463px 0px, rgb(255, 255, 255) -8.01144px 5.98472px 0px, rgb(255, 255, 255) -8.56889px 5.15501px 0px, rgb(255, 255, 255) -9.04072px 4.2738px 0px, rgb(255, 255, 255) -9.42222px 3.34988px 0px, rgb(255, 255, 255) -9.70958px 2.39249px 0px, rgb(255, 255, 255) -9.89993px 1.4112px 0px, rgb(255, 255, 255) -9.99135px 0.415807px 0px, rgb(255, 255, 255) -9.98295px -0.583741px 0px, rgb(255, 255, 255) -9.8748px -1.57746px 0px, rgb(255, 255, 255) -9.66798px -2.55541px 0px, rgb(255, 255, 255) -9.36457px -3.50783px 0px, rgb(255, 255, 255) -8.96758px -4.4252px 0px, rgb(255, 255, 255) -8.481px -5.29836px 0px, rgb(255, 255, 255) -7.90968px -6.11858px 0px, rgb(255, 255, 255) -7.25932px -6.87766px 0px, rgb(255, 255, 255) -6.53644px -7.56803px 0px, rgb(255, 255, 255) -5.74824px -8.18277px 0px, rgb(255, 255, 255) -4.90261px -8.71576px 0px, rgb(255, 255, 255) -4.00799px -9.16166px 0px, rgb(255, 255, 255) -3.07333px -9.51602px 0px, rgb(255, 255, 255) -2.10796px -9.7753px 0px, rgb(255, 255, 255) -1.12153px -9.93691px 0px, rgb(255, 255, 255) -0.123887px -9.99923px 0px, rgb(255, 255, 255) 0.87499px -9.96165px 0px, rgb(255, 255, 255) 1.86512px -9.82453px 0px, rgb(255, 255, 255) 2.83662px -9.58924px 0px, rgb(255, 255, 255) 3.77978px -9.25815px 0px, rgb(255, 255, 255) 4.68517px -8.83455px 0px, rgb(255, 255, 255) 5.54374px -8.32267px 0px, rgb(255, 255, 255) 6.34693px -7.72764px 0px, rgb(255, 255, 255) 7.0867px -7.0554px 0px, rgb(255, 255, 255) 7.75566px -6.31267px 0px, rgb(255, 255, 255) 8.34713px -5.50686px 0px, rgb(255, 255, 255) 8.8552px -4.64602px 0px, rgb(255, 255, 255) 9.27478px -3.73877px 0px, rgb(255, 255, 255) 9.6017px -2.79415px 0px, rgb(255, 255, 255) 9.83268px -1.82163px 0px, rgb(255, 255, 255) 9.96542px -0.830894px 0px;
+  margin-right: -18px;
+  margin-top: -30px;
+}
+
+.Number3 {
+  color: #2E3192;
+  text-shadow: rgb(255, 255, 255) 10px 0px 0px, rgb(255, 255, 255) 9.95004px 0.998334px 0px, rgb(255, 255, 255) 9.80067px 1.98669px 0px, rgb(255, 255, 255) 9.55336px 2.9552px 0px, rgb(255, 255, 255) 9.21061px 3.89418px 0px, rgb(255, 255, 255) 8.77583px 4.79426px 0px, rgb(255, 255, 255) 8.25336px 5.64642px 0px, rgb(255, 255, 255) 7.64842px 6.44218px 0px, rgb(255, 255, 255) 6.96707px 7.17356px 0px, rgb(255, 255, 255) 6.2161px 7.83327px 0px, rgb(255, 255, 255) 5.40302px 8.41471px 0px, rgb(255, 255, 255) 4.53596px 8.91207px 0px, rgb(255, 255, 255) 3.62358px 9.32039px 0px, rgb(255, 255, 255) 2.67499px 9.63558px 0px, rgb(255, 255, 255) 1.69967px 9.8545px 0px, rgb(255, 255, 255) 0.707372px 9.97495px 0px, rgb(255, 255, 255) -0.291995px 9.99574px 0px, rgb(255, 255, 255) -1.28844px 9.91665px 0px, rgb(255, 255, 255) -2.27202px 9.73848px 0px, rgb(255, 255, 255) -3.2329px 9.463px 0px, rgb(255, 255, 255) -4.16147px 9.09297px 0px, rgb(255, 255, 255) -5.04846px 8.63209px 0px, rgb(255, 255, 255) -5.88501px 8.08496px 0px, rgb(255, 255, 255) -6.66276px 7.45705px 0px, rgb(255, 255, 255) -7.37394px 6.75463px 0px, rgb(255, 255, 255) -8.01144px 5.98472px 0px, rgb(255, 255, 255) -8.56889px 5.15501px 0px, rgb(255, 255, 255) -9.04072px 4.2738px 0px, rgb(255, 255, 255) -9.42222px 3.34988px 0px, rgb(255, 255, 255) -9.70958px 2.39249px 0px, rgb(255, 255, 255) -9.89993px 1.4112px 0px, rgb(255, 255, 255) -9.99135px 0.415807px 0px, rgb(255, 255, 255) -9.98295px -0.583741px 0px, rgb(255, 255, 255) -9.8748px -1.57746px 0px, rgb(255, 255, 255) -9.66798px -2.55541px 0px, rgb(255, 255, 255) -9.36457px -3.50783px 0px, rgb(255, 255, 255) -8.96758px -4.4252px 0px, rgb(255, 255, 255) -8.481px -5.29836px 0px, rgb(255, 255, 255) -7.90968px -6.11858px 0px, rgb(255, 255, 255) -7.25932px -6.87766px 0px, rgb(255, 255, 255) -6.53644px -7.56803px 0px, rgb(255, 255, 255) -5.74824px -8.18277px 0px, rgb(255, 255, 255) -4.90261px -8.71576px 0px, rgb(255, 255, 255) -4.00799px -9.16166px 0px, rgb(255, 255, 255) -3.07333px -9.51602px 0px, rgb(255, 255, 255) -2.10796px -9.7753px 0px, rgb(255, 255, 255) -1.12153px -9.93691px 0px, rgb(255, 255, 255) -0.123887px -9.99923px 0px, rgb(255, 255, 255) 0.87499px -9.96165px 0px, rgb(255, 255, 255) 1.86512px -9.82453px 0px, rgb(255, 255, 255) 2.83662px -9.58924px 0px, rgb(255, 255, 255) 3.77978px -9.25815px 0px, rgb(255, 255, 255) 4.68517px -8.83455px 0px, rgb(255, 255, 255) 5.54374px -8.32267px 0px, rgb(255, 255, 255) 6.34693px -7.72764px 0px, rgb(255, 255, 255) 7.0867px -7.0554px 0px, rgb(255, 255, 255) 7.75566px -6.31267px 0px, rgb(255, 255, 255) 8.34713px -5.50686px 0px, rgb(255, 255, 255) 8.8552px -4.64602px 0px, rgb(255, 255, 255) 9.27478px -3.73877px 0px, rgb(255, 255, 255) 9.6017px -2.79415px 0px, rgb(255, 255, 255) 9.83268px -1.82163px 0px, rgb(255, 255, 255) 9.96542px -0.830894px 0px;
+  margin-right: -18px;
+  margin-top: -30px;
+}
+
+.Number4 {
+  color: #00A99D;
+  text-shadow: rgb(255, 255, 255) 10px 0px 0px, rgb(255, 255, 255) 9.95004px 0.998334px 0px, rgb(255, 255, 255) 9.80067px 1.98669px 0px, rgb(255, 255, 255) 9.55336px 2.9552px 0px, rgb(255, 255, 255) 9.21061px 3.89418px 0px, rgb(255, 255, 255) 8.77583px 4.79426px 0px, rgb(255, 255, 255) 8.25336px 5.64642px 0px, rgb(255, 255, 255) 7.64842px 6.44218px 0px, rgb(255, 255, 255) 6.96707px 7.17356px 0px, rgb(255, 255, 255) 6.2161px 7.83327px 0px, rgb(255, 255, 255) 5.40302px 8.41471px 0px, rgb(255, 255, 255) 4.53596px 8.91207px 0px, rgb(255, 255, 255) 3.62358px 9.32039px 0px, rgb(255, 255, 255) 2.67499px 9.63558px 0px, rgb(255, 255, 255) 1.69967px 9.8545px 0px, rgb(255, 255, 255) 0.707372px 9.97495px 0px, rgb(255, 255, 255) -0.291995px 9.99574px 0px, rgb(255, 255, 255) -1.28844px 9.91665px 0px, rgb(255, 255, 255) -2.27202px 9.73848px 0px, rgb(255, 255, 255) -3.2329px 9.463px 0px, rgb(255, 255, 255) -4.16147px 9.09297px 0px, rgb(255, 255, 255) -5.04846px 8.63209px 0px, rgb(255, 255, 255) -5.88501px 8.08496px 0px, rgb(255, 255, 255) -6.66276px 7.45705px 0px, rgb(255, 255, 255) -7.37394px 6.75463px 0px, rgb(255, 255, 255) -8.01144px 5.98472px 0px, rgb(255, 255, 255) -8.56889px 5.15501px 0px, rgb(255, 255, 255) -9.04072px 4.2738px 0px, rgb(255, 255, 255) -9.42222px 3.34988px 0px, rgb(255, 255, 255) -9.70958px 2.39249px 0px, rgb(255, 255, 255) -9.89993px 1.4112px 0px, rgb(255, 255, 255) -9.99135px 0.415807px 0px, rgb(255, 255, 255) -9.98295px -0.583741px 0px, rgb(255, 255, 255) -9.8748px -1.57746px 0px, rgb(255, 255, 255) -9.66798px -2.55541px 0px, rgb(255, 255, 255) -9.36457px -3.50783px 0px, rgb(255, 255, 255) -8.96758px -4.4252px 0px, rgb(255, 255, 255) -8.481px -5.29836px 0px, rgb(255, 255, 255) -7.90968px -6.11858px 0px, rgb(255, 255, 255) -7.25932px -6.87766px 0px, rgb(255, 255, 255) -6.53644px -7.56803px 0px, rgb(255, 255, 255) -5.74824px -8.18277px 0px, rgb(255, 255, 255) -4.90261px -8.71576px 0px, rgb(255, 255, 255) -4.00799px -9.16166px 0px, rgb(255, 255, 255) -3.07333px -9.51602px 0px, rgb(255, 255, 255) -2.10796px -9.7753px 0px, rgb(255, 255, 255) -1.12153px -9.93691px 0px, rgb(255, 255, 255) -0.123887px -9.99923px 0px, rgb(255, 255, 255) 0.87499px -9.96165px 0px, rgb(255, 255, 255) 1.86512px -9.82453px 0px, rgb(255, 255, 255) 2.83662px -9.58924px 0px, rgb(255, 255, 255) 3.77978px -9.25815px 0px, rgb(255, 255, 255) 4.68517px -8.83455px 0px, rgb(255, 255, 255) 5.54374px -8.32267px 0px, rgb(255, 255, 255) 6.34693px -7.72764px 0px, rgb(255, 255, 255) 7.0867px -7.0554px 0px, rgb(255, 255, 255) 7.75566px -6.31267px 0px, rgb(255, 255, 255) 8.34713px -5.50686px 0px, rgb(255, 255, 255) 8.8552px -4.64602px 0px, rgb(255, 255, 255) 9.27478px -3.73877px 0px, rgb(255, 255, 255) 9.6017px -2.79415px 0px, rgb(255, 255, 255) 9.83268px -1.82163px 0px, rgb(255, 255, 255) 9.96542px -0.830894px 0px;
+  margin-right: -18px;
+  margin-top: -30px;
+}
+
+
+.StepContentContainer1,
+.StepContentContainer2,
+.StepContentContainer3,
+.StepContentContainer4 {
+  display: flex;
+  flex-direction: row;
+}
+
+.StepContainer1,
+.StepContainer2,
+.StepContainer3,
+.StepContainer4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 24px;
+}
+
+
+.StepContainer1>img,
+.StepContainer2>img,
+.StepContainer3>img,
+.StepContainer4>img {
+  max-width: 140px;
+  max-height: 80px;
+  margin-top: 8px;
+
+}
+
+.StepContainer1 {
+  background-color: #8CC63F;
+  border-radius: 12px;
+  color: white;
+  height: 260px;
+  width: 300px;
+}
+
+.StepContainer2 {
+  background-color: #3FA9F5;
+  border-radius: 12px;
+  color: white;
+  height: 260px;
+  width: 300px;
+}
+
+.StepContainer3 {
+  background-color: #2E3192;
+  border-radius: 12px;
+  color: white;
+  height: 260px;
+  width: 300px;
+}
+
+.StepContainer4 {
+  background-color: #00A99D;
+  border-radius: 12px;
+  color: white;
+  height: 260px;
+  width: 300px;
+}
+
+
+/*-----------------   FAQ ---------------------------*/
+
+
+.FAQ {
+  text-align: center;
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+.FAQ>h1 {
+  font-size: 28px;
+}
+
+
+
+.FAQ>img {
+  max-width: 100px;
+  max-height: 100px;
+  position: absolute;
+  margin-left: 100px;
+  margin-top: -60px;
+
+
+}
+
+.Accordion {
+  padding-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.AccordionBox {
+  cursor: pointer;
+  align-items: center;
+  width: 80%;
+}
+
+.content-box {
+  font-size: 16px;
+}
+
+.title {
+  font-size: 18px;
+  width: 90%;
+  text-align: left;
+}
+
+.content-box {
+  text-align: left;
+  padding-top: 12px;
+}
+
+.AccordionContentBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 12px;
+}
+
+.PlusMinus {
+  width: 10%;
+}
+
+.AccordionLine {
+  border: 1px solid #2E3192;
+  margin-top: 16px;
+}
+
+
+/*--------------   Bestseller   -----------------*/
+
+.BestsellerMobile {
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px;
+}
+
+.BestsellerDesktopHolder {
+  display: none;
+}
+
+.BestsellerDesktop {
+  display: none;
+}
+
+.BestsellerDesktopPacket {
+  display: none;
+}
+
+
+.BestsellerTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 16px;
+}
+.BestsellerTitle>h1{
+  text-align: center;
+  font-size: 32px;
+}
+
+.BestsellerProgressBar {
+  width: 16px;
+  height: 16px;
+  background-color: #3FA9F5;
+  border-radius: 50%;
+}
+
+.BestsellerProgressBarActive {
+  width: 16px;
+  height: 16px;
+  background-color: #2E3192;
+  border-radius: 50%;
+}
+
+
+
+.ListHolder {
+  width: 100%;
+}
+
+.BestsellerSelect {
+  cursor: pointer;
+  border-radius: 12px;
+  background: #8CC63F;
+  box-shadow: 0px -4px 0px 0px rgba(0, 0, 0, 0.25) inset;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 8px;
+  padding: 8px 16px;
+  font-weight: 700;
+  border: none;
+}
+
+
+
+.BestsellerImg {
+  max-width: 160px;
+  max-height: 160px;
+  padding-bottom: 8px;
+}
+
+.BestsellerTitle>p {
+  margin: 16px 0;
+  text-align: center;
+}
+
+.BestsellerContentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.BestsellerContentContainer>h1 {
+  margin-bottom: 16px;
+  font-size: 24px;
+
+}
+
+.BestsellerContentContainer>p {
+  font-size: 20px;
+  font-weight: medium;
+  align-self: center;
+}
+
+.LineBestseller {
+  margin-top: 16px;
+  width: 120px;
+  border: 1px solid #3FA9F5;
+  align-self: center;
+}
+
+.BestsellerControlsContainer {
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.BestsellerShopRedirection {
+  margin: 16px auto;
+  background-color: #3FA9F5;
+  box-shadow: 0px -2.5px 0px 0px rgba(36, 36, 36, 0.25) inset;
+  color: white;
+  border-radius: 8px;
+  font-size: 20px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 8px;
+  font-weight: 700;
+  width: fit-content;
+}
+
+.BestsellerControls {
+  display: flex;
+  justify-content: center;
+  padding-top: 16px;
+}
+
+.BestsellerControlsContent {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.BestsellerBuy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.BestsellerBuy>span {
+  font-size: 18px;
+}
+
+.BestsellerIdButton {
+  background: none;
+  border: none;
+  width: 40px;
+}
+
+.ListBestsellers{
+  width: 100%;
+  list-style-position: inside;
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+}
+
+.BestsellerBuyButton {
+  display: flex;
+  padding: 12px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 65px;
+  border: 2px solid var(--Red1, #F15A24);
+  background-color: white;
+  color: #F15A24;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.BestsellerBuyButton:hover {
+  color: white;
+  background-color: #F15A24;
+}
+
+
+/*--------------   Formulas  -----------------*/
+
+.Formulas {
+  display: flex;
+  flex-direction: column;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.FormulasForm>p,
+.FormulasForm>h1 {
+  padding-top: 16px;
+}
+
+.FormulasForm>h1 {
+  font-size: 32px;
+  text-align: center;
+}
+
+
+.FormulasForm>form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 16px;
+}
+
+.FormulasLogosContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.FormulasLogos>img {
+  aspect-ratio: 1;
+}
+
+.FormulasLogos {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.FormulasEmail {
+  display: flex;
+  padding: 12px 16px;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 12px;
+  background: #3FA9F5;
+  box-shadow: 0px -4px 0px 0px rgba(36, 36, 36, 0.25) inset;
+  color: white;
+  border: transparent;
+}
+
+.FormulasEmail::placeholder {
+  color: white;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+}
+
+.FormulasDownload {
+  display: flex;
+  padding: 4px 12px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+    border: none;
+  background: #8CC63F;
+  box-shadow: 0px -4px 0px 0px rgba(36, 36, 36, 0.25) inset;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 16px;
+}
+
+.FormulasLogosContainer>h1{
+  padding-top: 32px;
+  font-size: 32px;
+  text-align: center;
+}
+.FormulasLogosContainer>p {
+  line-height: 130%;
+  padding-top: 16px;
+}
+
+/*--------------   Opinons  -----------------*/
+
+.Opinions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #C2E4FC;
+  padding: 16px;
+}
+
+.Opinions>h1 {
+  font-size: 32px;
+  text-align: center;
+}
+
+
+.ReviewHolder
+{
+  width: 100%;
+  margin-top: 32px;
+}
+.OpinionsControls {
+  display: flex;
+  margin-top: 32px;
+  width: 200px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 24px;
+}
+
+.OpinionsProgressBar {
+  width: 16px;
+  height: 16px;
+  background-color: #3FA9F5;
+  border-radius: 50%;
+}
+
+.OpinionsProgressBarActive {
+  width: 16px;
+  height: 16px;
+  background-color: #2E3192;
+  border-radius: 50%;
+}
+
+.OpinionsIdButton {
+  background: none;
+  border: none;
+  width: 40px;
+  cursor: pointer;
+}
+
+.OpinionsRedirect {
+  display: flex;
+  padding: 7.5px 10px;
+  align-items: center;
+  border-radius: 7.5px;
+  background: #3FA9F5;
+  box-shadow: 0px -2.5px 0px 0px rgba(36, 36, 36, 0.25) inset;
+  text-decoration: none;
+  color: #FFF;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.6px;
+}
+
+.OpinionsContent {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.25);
+  width: 100%;
+}
+.OpinionsContent>img
+{
+  height: 50px;
+  aspect-ratio: 1;
+  transform: translateY(-50%);
+  border: 5px solid #FFF;
+  border-radius: 50%;
+  fill: #fff;
+  
+}
+
+.OpinionsContent2 {
+  display: none;
+}
+
+.OpinionsContent3 {
+  display: none;
+}
+
+.OpinionsText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 16px 16px 16px;
+  text-align: center;
+}
+
+.OpinionsImg {
+  background-color: white;
+  height: 100px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+}
+
+.OpinionsUserName {
+  color: var(--Text, #242424);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+}
+
+.OpinionsUserClass,
+.OpinionsUserComment {
+  color: var(--Text, #242424);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+
+.OpinionsUserClass {
+  padding-top: 8px;
+}
+
+.OpinionsUserComment {
+  padding-top: 32px;
+}
+
+/*--------------   Comparison  -----------------*/
+
+.Comparison {
+  display: none;
+}
+
+
+
+/*--------------   Footer  -----------------*/
+
+Footer {
+  background-color: #2E3192;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.FooterContentLeft {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.FooterContentLeft>img {
+  align-self: center;
+  margin-top: 16px;
+  width: 280px;
+  height: 40px;
+}
+
+.FooterContentLeft>span {
+  margin-top: 8px;
+  margin-left: 16px;
+}
+
+.FooterContentMiddle {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-top: 32px;
+  margin-left: 16px;
+}
+
+.FooterContentMiddle>a {
+  margin-top: 8px;
+}
+
+.FooterContentRight {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-top: 32px;
+  margin-left: 16px;
+}
+
+.FooterContentRightImg {
+  width: 200px;
+  margin-bottom: 6px;
+  background: white;
+  text-decoration: none;
+}
+
+.FooterContentRight>a {
+  margin-bottom: 6px;
+}
+
+.FooterContentMiddle>a {
+  color: white;
+  text-decoration: none;
+  width: 140px;
+}
+
+.FooterContentRight>a {
+  color: white;
+  text-decoration: none;
+  width: 140px;
+}
+
+.FooterContentRight>img {
+  background: white;
+}
+
+.FooterContentSocialMedia>a {
+  background: white;
+}
+
+.FooterContentSocialMedia {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 200px;
+  margin-bottom: 16px;
+}
+
+
+/* --------------------------- TABLET ---------------------------------*/
+
+@media screen and (min-width: 768px) {
+
+  /* --------------------------- TABLET BENEFITS ---------------------------------*/
+
+  .Benefits {
+    height: 1000px;
+  }
+
+  .BenefitsContainerAll {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "div1 div2"
+      "div3 div4";
+
+  }
+
+  .BenefitContainer1 {
+    grid-area: div1;
+    margin-left: auto;
+    max-width: 400px;
+  }
+
+  .BenefitContainer2 {
+    grid-area: div2;
+    margin-right: auto;
+    max-width: 400px;
+  }
+
+  .BenefitContainer3 {
+    grid-area: div3;
+    margin-left: auto;
+    max-width: 400px;
+  }
+
+  .BenefitContainer4 {
+    grid-area: div4;
+    margin-right: auto;
+    max-width: 400px;
+  }
+
+
+  .BenefitsIntro>h1 {
+    padding-top: 0;
+    font-size: 48px;
+  }
+
+  .BenefitsIntro>p {
+    font-size: 20px;
+  }
+
+  .BenefitsIntro {
+    padding-bottom: 64px;
+  }
+
+  /*------------------ FORMULAS --------------------*/
+
+  .FormulasForm>p,
+  .FormulasForm>h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .FormulasEmail {
+    align-self: center;
+    width: 400px;
+
+  }
+
+  /*------------------ CourseSteps -------------------*/
+
+  .CourseSteps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr 1fr;
+    grid-template-areas:
+      "title title"
+      "div1 div2"
+      "div3 div4";
+
+
+  }
+
+  .StepsIntroContainer {
+    grid-area: title;
+  }
+
+  .StepContainer1 {
+    grid-area: div1;
+    margin-right: 12px;
+
+  }
+
+  .StepContainer2 {
+    grid-area: div2;
+    margin-left: 12px;
+  }
+
+  .StepContainer3 {
+    grid-area: div3;
+    margin-right: 12px;
+  }
+
+  .StepContainer4 {
+    grid-area: div4;
+    margin-left: 12px;
+  }
+
+
+  /*---------------------------- COMPARISON --------------------------*/
+
+  .Comparison {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .Comparison>h1 {
+    font-size: 40px;
+    margin-top: 16px;
+  }
+
+  .Comparison>p {
+    font-size: 20px;
+    margin-top: 16px;
+  }
+
+  th,
+  td {
+    border-bottom: solid 2px #2E3192;
+  }
+
+  th {
+    font-size: 26px;
+  }
+
+  .ComparisonMainStat {
+    width: 200px;
+    height: 80px;
+  }
+
+  .ComparisonLastRow {
+    border-bottom: none;
+  }
+
+  .ComparisonLeftCategories {
+    border-right: solid 2px #2E3192;
+    text-align: left;
+    width: 260px;
+    font-size: 20px;
+  }
+
+  .ComparisonLeftBottomCell {
+    border-right: solid 2px #2E3192;
+    border-bottom: none;
+    text-align: left;
+    font-size: 20px;
+  }
+
+  .ComparisonLastRowAll {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 80%;
+    height: 600px;
+    text-align: center;
+    margin-top: 48px;
+  }
+
+}
+
+
+/* --------------------------- DESKTOP ---------------------------------*/
+@media screen and (min-width: 1200px) {
+
+
+  /* --------------------------- DESKTOP HERO ---------------------------------*/
+
+  .HeaderMobile {
+    display: none;
+  }
+
+  .NavbarMobileHolder {
+    display: none;
+  }
+
+  .HeaderDesktop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.25);
+    height: 80px;
+    padding: 0 10%;
+  }
+
+  .HeaderLogoDesktop {
+    width: 260px;
+    height: 60px;
+  }
+
+  .HeaderDesktopNavbarKursy {
+    text-decoration: none;
+    color: black;
+    padding-right: 36px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #3FA9F5;
+  }
+
+  .HeaderDesktopNavbarKursy:hover {
+    color: #3FA9F5;
+  }
+
+
+  .HeaderDesktopNavbarBlog {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+  }
+
+  .HeaderDesktopNavbarBlog:hover {
+    color: #3FA9F5;
+  }
+
+  .CreateAccountRedirect {
+    width: fit-content;
+    border: solid 2px #3FA9F5;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    border-radius: 12px;
+    padding: 12px 16px;
+    box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.25);
+    font-weight: 500;
+  }
+
+  .LogInRedirect {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 12px 16px;
+    align-items: center;
+    border-radius: 12px;
+    background: var(--Blue1, #3FA9F5);
+    box-shadow: 0px -4px 0px 0px rgba(36, 36, 36, 0.25) inset;
+    color: white;
+  }
+
+  .HeaderDesktopRightSideHolder {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .HeaderDesktopCartHolder
+  {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .HeaderDesktopCartHolder span
+  {
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .NavbarDesktop {
+    display: grid;
+    border-radius: 12px;
+    height: 440px;
+    border: solid 1px #3FA9F5;
+    background-color: #fff;
+    width: 800px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr 0.2fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "title title"
+      "div1 div2"
+      "title2 title2";
+  }
+
+  .NavbarDesktopHolder {
+    position: absolute;
+    margin-left: 35%;
+    margin-top: -32px;
+  }
+
+  .NavbarDesktopTitle1 {
+    grid-area: title;
+    padding-left: 48px;
+    padding-top: 24px;
+  }
+
+  .NavbarDesktopTitle2 {
+    grid-area: title2;
+    padding-left: 48px;
+    padding-bottom: 24px;
+  }
+
+  .NavbarDesktopContent1 {
+    grid-area: div1;
+    padding-left: 48px;
+    padding-top: 12px;
+  }
+
+  .NavbarDesktopContent2 {
+    grid-area: div2;
+    padding-top: 12px;
+  }
+
+  .NavbarDesktopContent1>ul {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-color: #3FA9F5;
+    text-decoration-thickness: 2px;
+    list-style: none;
+  }
+
+  .NavbarDesktopContent1>ul>li>a {
+    color: #2E3192;
+    font-size: 20px;
+    text-decoration: none;
+  }
+
+  .NavbarDesktopContent2>ul>li>a {
+    color: #2E3192;
+    font-size: 20px;
+    text-decoration: none;
+  }
+
+  .NavbarDesktopContent1>ul>li {
+    margin-top: 6px;
+  }
+
+  .NavbarDesktopContent2>ul>li {
+    margin-top: 6px;
+  }
+
+  .NavbarDesktopContent2>ul {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-color: #3FA9F5;
+    text-decoration-thickness: 2px;
+    list-style: none;
+  }
+
+
+
+  .NavbarDesktopTitleContent {
+    text-decoration: underline;
+  }
+
+  /* --------------------------- DESKTOP HERO ---------------------------------*/
+
+  .Hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 10% 64px 10%;
+    width: 100%;
+    gap: 20px;
+    margin: 0;
+  }
+
+  .HeroLinks {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 16px;
+    padding-top: 32px;
+  }
+
+  .HeroIntroduction {
+    align-items: normal;
+    width: fill;
+  }
+
+  .HeroLinks {
+    justify-content: left;
+  }
+
+  .HeroIntroduction>h1 {
+    text-align: left;
+    font-size: 48px;
+  }
+
+  .HeroIntroduction>p {
+    text-align: left;
+    font-size: 24px;
+  }
+
+  .HeroImgMobile {
+    display: none;
+  }
+
+  .HeroImgDesktop {
+    display: block;
+
+  }
+
+
+  /* --------------------------- DESKTOP BENEFITS ---------------------------------*/
+
+  .Benefits {
+    height: 640px;
+  }
+
+  .BenefitsContainerAll {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .BenefitContainer1 {
+    width: 25%;
+  }
+
+  .BenefitContainer2 {
+    width: 25%;
+  }
+
+  .BenefitContainer3 {
+    width: 25%;
+  }
+
+  .BenefitContainer4 {
+    width: 25%;
+  }
+
+  .BenefitsIntro {
+    padding-bottom: 86px;
+  }
+
+
+  /*------------------ FORMULAS --------------------*/
+
+  .FormulasForm {
+    width: 400px;
+  }
+
+  .FormulasForm>p {
+    font-size: 20px;
+  }
+
+  .FormulasForm>h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .Formulas {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .FormulasLogosContainer {
+    width: 400px;
+  }
+
+  .FormulasLogosContainer>h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .FormulasLogosContainer>p {
+    font-size: 20px;
+  }
+
+
+  /*------------------ CourseSteps -------------------*/
+
+  .CourseSteps {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+
+  .StepContainer1 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    height: 192px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 20%;
+  }
+
+  .StepContentContainer1 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .StepContainer2 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    height: 192px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 30%;
+  }
+
+  .StepContentContainer2 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .StepContainer3 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    height: 192px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 40%;
+  }
+
+  .StepContentContainer3 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .StepContainer4 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    height: 192px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 50%;
+  }
+
+  .StepContentContainer4 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .NumberContainer {
+    font-size: 280px;
+    height: 192px;
+  }
+
+  .Number1 {
+    margin-right: 0;
+    margin-top: -64px;
+    margin-left: -86px;
+  }
+
+  .Number2 {
+    margin-right: 0;
+    margin-top: -64px;
+    margin-left: -86px;
+  }
+
+  .Number3 {
+    margin-right: 0;
+    margin-top: -64px;
+    margin-left: -86px;
+  }
+
+  .Number4 {
+    margin-right: 0;
+    margin-top: -64px;
+    margin-left: -86px;
+  }
+
+  .StepTitle {
+    font-size: 40px;
+  }
+
+  .StepContainer1>img,
+  .StepContainer2>img,
+  .StepContainer3>img,
+  .StepContainer4>img {
+    margin-top: 0;
+    max-height: 160px;
+    max-width: 140px;
+  }
+
+  .StepsIntroContainer>h1 {
+    font-size: 40px;
+  }
+
+  .StepsIntroContainer>p {
+    font-size: 20px;
+  }
+
+  .StepsImgTools {
+    display: block;
+    position: absolute;
+    max-width: 260px;
+    max-height: 260px;
+    margin-left: -60%;
+    margin-top: 40%;
+  }
+
+  .StepsImgBoy {
+    display: block;
+    position: absolute;
+    max-width: 260px;
+    max-height: 260px;
+    margin-right: -80%;
+    margin-bottom: 25%;
+  }
+
+  /*------------------------ DESKTOP OPINIONS ------------------------*/
+
+  .OpinionsContent2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 86px;
+    background-color: white;
+    width: 340px;
+    height: 240px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.25);
+    margin-right: 56px;
+  }
+
+  .OpinionsContent3 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 86px;
+    background-color: white;
+    width: 340px;
+    height: 240px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.25);
+    margin-left: 56px;
+  }
+
+  .ReviewHolder {
+    display: flex;
+    flex-direction: row;
+  }
+
+  /*-------------------------- BESTSELLER DESKTOP -----------------------*/
+
+
+   .Bestseller{
+    padding: 0 10% 32px 10%;
+
+   }
+  .BestsellerMobile {
+    display: none;
+  }
+
+  .BestsellerDesktop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .BestsellerDesktop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .BestsellerDesktopButtonsHolder {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .BestsellerDesktopContentHolder {
+    display: flex;
+    flex-direction: row;
+    margin-top: 32px;
+    width: 100%;
+  }
+
+  .BestsellerDesktopContent1 {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+  }
+
+  .BestsellerDesktopContent2 {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+  }
+
+  .BestsellerDesktopContentLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+  }
+
+  .BestsellerDesktopContentRight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+  }
+
+  .BestsellerDesktopContentRight>p {
+    font-size: 24px;
+    font-weight: 500;
+    position: relative;
+  }
+  .BestsellerDesktopContentRight>p::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #3FA9F5;
+    bottom: -16px;
+  }
+
+  .BestsellerDesktopContentLeft>h1 {
+    font-size: 32px;
+  }
+
+  .LineBestsellerDesktop {
+    width: 100%;
+    border: 1px solid #3FA9F5;
+  }
+
+  .BestsellerImgDesktop {
+    height: 400px;
+  }
+
+  .ListBestsellersDesktop>li {
+    font-size: 20px;
+    margin-top: 4px;
+  }
+
+  .BestsellerDesktopPrice {
+    font-size: 24px;
+  }
+
+  .BestsellerBuyButton {
+    font-size: 24px;
+  }
+
+  .BestsellerShopRedirection {
+    margin-top: 32px;
+    font-size: 32px;
+    font-weight: 700;
+    display: flex;
+    padding: 12px 16px;
+    align-items: center;
+    border-radius: 12px;
+    background: var(--Blue1, #3FA9F5);
+    box-shadow: 0px -4px 0px 0px rgba(36, 36, 36, 0.25) inset;
+  }
+
+  .BestsellerDesktopHolder>h1 {
+    font-size: 40px;
+  }
+
+  .BestsellerDesktopHolder>p {
+    font-size: 20px;
+    margin-top: 16px;
+    margin-bottom: 32px;
+  }
+
+  .BestsellerDesktopButtons {
+    display: flex;
+    padding: 6px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 12px;
+    background: #8CC63F;
+    box-shadow: 0px -4px 0px 0px rgba(0, 0, 0, 0.25) inset;
+    color: white;
+    font-size: 20px;
+    border: transparent;
+    cursor: pointer;
+  }
+
+  .BestsellerDesktopHolder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .BestsellerDesktopPacket {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .BestsellerDesktopPacketContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 640px;
+  }
+
+  .BestsellerDesktopPacketSaleHolder {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .BestsellerDesktopPacketContent>h1 {
+    font-size: 32px;
+    text-align: center;
+    width: 260px;
+  }
+
+  .BestsellerDesktopPacketSale {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 20px;
+    background-color: #F15A24;
+    border-radius: 24px;
+    color: white;
+    margin-right: 12px;
+  }
+
+  .BestsellerDesktopPacketClass {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 20px;
+    background-color: #3FA9F5;
+    border-radius: 24px;
+    color: white;
+  }
+
+  .BestsellerDesktopPacketContent>span {
+    font-size: 24px;
+  }
+
+  /*--------------------- FOOTER --------------------------*/
+
+  Footer {
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 20px;
+  }
+
+
+  /*--------------------- FAQ --------------------------*/
+
+  .Accordion {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .content-box {
+    font-size: 20px;
+  }
+
+  .FAQ>h1 {
+    font-size: 32px;
+  }
+
 }
